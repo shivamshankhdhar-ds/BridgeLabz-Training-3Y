@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h1 align="center">Student Registration Form</h1>
+
+    <form>
+
+        <table align="center">
+
+            <tr>
+                <td>Roll no. :</td>
+                <td>
+                    <input type="text" name="rollno">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Student name :</td>
+                <td>
+                    <input type="text" name="firstname" placeholder="First Name">
+                    -
+                    <input type="text" name="lastname" placeholder="Last Name">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Father's name :</td>
+                <td>
+                    <input type="text" name="fathername">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date of birth :</td>
+                <td>
+                    <input type="text" name="day" placeholder="Day" size="3">
+                    -
+                    <input type="text" name="month" placeholder="Month" size="5">
+                    -
+                    <input type="text" name="year" placeholder="Year" size="5">
+                    (DD-MM-YYYY)
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mobile no. :</td>
+                <td>
+                    <input type="text" value="+91" size="2" readonly>
+                    -
+                    <input type="text" name="mobile">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email id :</td>
+                <td>
+                    <input type="email" name="email">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password :</td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender :</td>
+                <td>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Department :</td>
+                <td>
+                    <input type="checkbox" name="department" id="cse">
+                    <label for="cse">CSE</label>
+
+                    <input type="checkbox" name="department" id="it">
+                    <label for="it">IT</label>
+
+                    <input type="checkbox" name="department" id="ece">
+                    <label for="ece">ECE</label>
+
+                    <input type="checkbox" name="department" id="civil">
+                    <label for="civil">Civil</label>
+
+                    <input type="checkbox" name="department" id="mech">
+                    <label for="mech">Mech</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Course :</td>
+                <td>
+                    <select name="course">
+                        <option>Select Current Course</option>
+                        <option>B.Tech</option>
+                        <option>BCA</option>
+                        <option>MCA</option>
+                        <option>M.Tech</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Student photo :</td>
+                <td>
+                    <input type="file" name="photo">
+                </td>
+            </tr>
+
+            <tr>
+                <td>City :</td>
+                <td>
+                    <input type="text" name="city">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address :</td>
+                <td>
+                    <textarea name="address" rows="5" cols="40"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</body>
+
+</html>
