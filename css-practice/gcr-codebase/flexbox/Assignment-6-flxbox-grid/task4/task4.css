@@ -1,0 +1,130 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+}
+
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    gap: 20px;
+    padding: 20px;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 25px;
+    background-color: #1e293b;
+    color: white;
+    border-radius: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 25px 20px;
+    background-color: #334155;
+    color: white;
+    border-radius: 10px;
+}
+
+.sidebar h2 {
+    margin-bottom: 25px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #475569;
+}
+
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(180px, auto));
+    gap: 20px;
+}
+
+.box {
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box h2 {
+    margin-bottom: 15px;
+    color: #2563eb;
+}
+
+.box p {
+    line-height: 1.6;
+}
+
+.box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* One box spans two columns */
+.box1 {
+    grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main";
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .box1 {
+        grid-column: span 1;
+    }
+}

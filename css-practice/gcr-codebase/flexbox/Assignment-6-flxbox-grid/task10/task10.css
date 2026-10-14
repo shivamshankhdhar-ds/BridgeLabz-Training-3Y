@@ -1,0 +1,181 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header using Flexbox */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 8%;
+    background-color: #1e293b;
+    color: white;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    color: #38bdf8;
+}
+
+/* Main layout using Grid */
+.main-layout {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    gap: 25px;
+    padding: 35px 8%;
+    align-items: start;
+}
+
+.article,
+.sidebar {
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.animated-title {
+    margin-bottom: 20px;
+    color: #2563eb;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.article > p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Three boxes using Flexbox */
+.feature-container {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.feature-box {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    background-color: #dbeafe;
+    border-radius: 8px;
+}
+
+.feature-box h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #1d4ed8;
+}
+
+.feature-box p {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Sidebar */
+.sidebar h2 {
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar p {
+    line-height: 1.7;
+}
+
+/* Title animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    padding: 22px;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .main-layout {
+        grid-template-columns: 1fr;
+        padding: 25px 5%;
+    }
+
+    .feature-container {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+}
