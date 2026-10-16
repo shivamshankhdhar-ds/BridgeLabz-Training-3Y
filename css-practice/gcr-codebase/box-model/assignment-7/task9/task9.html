@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Outlines and Form Elements</title>
+    <link rel="stylesheet" href="task9.css">
+</head>
+<body>
+
+    <header>
+        <h1>Outlines and Form Elements</h1>
+        <p>Explore HTML form controls and CSS outline properties.</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>About CSS Outlines</h2>
+            <p>
+                An outline is a line drawn outside an element's border.
+                It can highlight elements without affecting their layout.
+            </p>
+        </section>
+
+        <section class="outline-demo">
+            <h2>Outline Examples</h2>
+
+            <div class="outline-container">
+                <div class="outline-box solid-outline">
+                    Solid Outline
+                </div>
+
+                <div class="outline-box dashed-outline">
+                    Dashed Outline
+                </div>
+
+                <div class="outline-box dotted-outline">
+                    Dotted Outline
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Registration Form</h2>
+            <p>Click or tab into the fields to see the focus outline.</p>
+
+            <form action="#" method="get">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Select Course</label>
+                    <select id="course" name="course" required>
+                        <option value="">Choose a course</option>
+                        <option value="computer-science">Computer Science</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="ai">Artificial Intelligence</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Write your message..."
+                    ></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required
+                    >
+                    <label for="terms">I agree to the terms and conditions.</label>
+                </div>
+
+                <button type="submit">Register</button>
+                <button type="reset" class="reset-button">Reset</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Practice — Assignment 7, Task 9</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+
+    <header>
+        <h1>Advanced CSS Selectors</h1>
+        <p>Explore different CSS selector types.</p>
+    </header>
+
+    <main>
+        <section class="selector-section">
+            <h2>1. Attribute Selectors</h2>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your name">
+
+            <p>
+                Visit
+                <a href="https://developer.mozilla.org/">
+                    MDN Web Docs
+                </a>
+                to learn more about CSS.
+            </p>
+        </section>
+
+        <section class="selector-section">
+            <h2>2. Pseudo-classes</h2>
+
+            <ul class="item-list">
+                <li>HTML Basics</li>
+                <li>CSS Styling</li>
+                <li>Flexbox Layout</li>
+                <li>CSS Grid</li>
+                <li>Responsive Design</li>
+            </ul>
+
+            <p class="focus-note">
+                Click the input above to see the focus effect.
+            </p>
+        </section>
+
+        <section class="selector-section">
+            <h2>3. Pseudo-elements</h2>
+
+            <p class="decorated-text">
+                CSS pseudo-elements style specific parts of content.
+            </p>
+        </section>
+
+        <section class="selector-section combinator-section">
+            <h2>4. CSS Combinators</h2>
+
+            <div class="parent">
+                <p>This paragraph is a direct child.</p>
+
+                <div>
+                    <p>This paragraph is a nested descendant.</p>
+                </div>
+            </div>
+
+            <h3>Adjacent sibling example</h3>
+            <p>This paragraph comes immediately after the heading.</p>
+
+            <h3>General sibling example</h3>
+            <p>This is a general sibling paragraph.</p>
+            <p>This is another general sibling paragraph.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Advanced CSS Selectors</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header and footer */
+header,
+footer {
+    background-color: #243b55;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+header p {
+    margin-top: 5px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+/* Main layout */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+section {
+    background-color: white;
+    padding: 24px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #243b55;
+    margin-bottom: 12px;
+}
+
+/* Outline demonstrations */
+.outline-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    padding: 20px 10px;
+}
+
+.outline-box {
+    padding: 18px;
+    background-color: #eaf2ff;
+    border: 2px solid #2563a6;
+    text-align: center;
+    min-width: 150px;
+}
+
+.solid-outline {
+    outline: 3px solid #16803c;
+}
+
+.dashed-outline {
+    outline: 3px dashed #d97706;
+}
+
+.dotted-outline {
+    outline: 3px dotted #7c3aed;
+}
+
+/* Form layout */
+form {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* Text inputs, dropdown and textarea */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aab4c3;
+    border-radius: 5px;
+    font: inherit;
+    background-color: #fff;
+}
+
+/* Outline appears when a form control receives focus */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+    border-color: #2563a6;
+}
+
+/* Highlight invalid fields after interaction or submission */
+input:invalid:focus {
+    outline-color: #fca5a5;
+}
+
+/* Checkbox row */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input {
+    width: 17px;
+    height: 17px;
+    accent-color: #2563a6;
+}
+
+.checkbox-group label {
+    cursor: pointer;
+}
+
+/* Buttons */
+button {
+    padding: 11px 22px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2563a6;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+button:hover {
+    background-color: #174779;
+}
+
+button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+.reset-button {
+    background-color: #64748b;
+}
+
+.reset-button:hover {
+    background-color: #475569;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    .outline-container {
+        gap: 25px;
+    }
+
+    .outline-box {
+        width: 100%;
+    }
+
+    button {
+        margin-bottom: 8px;
+    }
+}

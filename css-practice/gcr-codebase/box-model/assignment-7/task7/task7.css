@@ -1,0 +1,146 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.8;
+}
+
+/* Header styling */
+.header {
+    padding: 30px 15px;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* Article layout */
+.article {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.article section {
+    margin-bottom: 35px;
+}
+
+.article h2 {
+    margin-bottom: 15px;
+    color: #2563eb;
+    font-size: 24px;
+}
+
+/* First-line pseudo-element emphasizes the first line */
+.first-letter-demo::first-line {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* First-letter pseudo-element highlights the first letter */
+.first-letter-demo::first-letter {
+    font-size: 40px;
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Different font families */
+.font-arial {
+    font-family: Arial, sans-serif;
+}
+
+.font-georgia {
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+.font-courier {
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+}
+
+/* Different font weights and sizes */
+.normal-text {
+    font-weight: 400;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.large-text {
+    font-size: 24px;
+}
+
+.small-text {
+    font-size: 13px;
+}
+
+/* Custom colors for semantic emphasis elements */
+strong {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+em {
+    color: #7c3aed;
+    font-style: italic;
+}
+
+mark {
+    background-color: #fef08a;
+    color: #713f12;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Improve paragraph readability */
+.article p {
+    text-align: left;
+    letter-spacing: 0.3px;
+    line-height: 1.8;
+}
+
+/* Footer styling */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Responsive typography and spacing */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .article {
+        margin: 20px 12px;
+        padding: 22px;
+    }
+
+    .article h2 {
+        font-size: 21px;
+    }
+
+    .large-text {
+        font-size: 21px;
+    }
+}

@@ -1,0 +1,129 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #1e293b;
+    color: white;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+/* Arrange all transformation examples horizontally */
+.transform-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    padding: 60px 25px;
+}
+
+/* Each item contains a box, label, and description */
+.transform-item {
+    width: 220px;
+    text-align: center;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    /* Smoothly animate all transformation properties */
+    transition: all 0.4s ease;
+}
+
+.rotate-box {
+    background-color: #2563eb;
+}
+
+.scale-box {
+    background-color: #059669;
+}
+
+.translate-box {
+    background-color: #9333ea;
+}
+
+.skew-box {
+    background-color: #ea580c;
+}
+
+/* Rotate the first box on hover */
+.rotate-box:hover {
+    transform: rotate(10deg);
+}
+
+/* Enlarge the second box on hover */
+.scale-box:hover {
+    transform: scale(1.2);
+}
+
+/* Move the third box right and upward */
+.translate-box:hover {
+    transform: translate(15px, -15px);
+}
+
+/* Slant the fourth box on hover */
+.skew-box:hover {
+    transform: skew(10deg);
+}
+
+.transform-item h2 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.transform-item p {
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Footer styling */
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Stack items on smaller screens */
+@media (max-width: 600px) {
+    .transform-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .transform-item {
+        width: 100%;
+        max-width: 280px;
+    }
+}

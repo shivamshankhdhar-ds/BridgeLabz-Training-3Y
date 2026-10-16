@@ -1,0 +1,133 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #1e293b;
+    color: white;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+/* Arrange all three cards in one row */
+.card-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 50px 8%;
+}
+
+/* Common card styling */
+.card {
+    flex: 1;
+    max-width: 320px;
+    padding: 30px 25px;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Different shadow styles for each card */
+.card-one {
+    box-shadow: 5px 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+.card-two {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-three {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+}
+
+/* Circular profile initials */
+.avatar {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-two .avatar {
+    background-color: #059669;
+}
+
+.card-three .avatar {
+    background-color: #9333ea;
+}
+
+/* Text shadow adds depth to headings */
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.role {
+    margin-bottom: 18px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.card p:last-child {
+    line-height: 1.7;
+    color: #475569;
+}
+
+/* Lift cards and increase shadow on hover */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styling */
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 800px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 35px 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+        flex: auto;
+    }
+}

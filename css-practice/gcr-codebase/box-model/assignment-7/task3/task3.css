@@ -1,0 +1,134 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Fixed header stays at the top while scrolling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px;
+    text-align: center;
+    background-color: #172554;
+    z-index: 10;
+}
+
+/* Main content begins below the fixed header */
+main {
+    padding-top: 75px;
+    padding-bottom: 65px;
+}
+
+/* Common section layout */
+.gradient-section {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Linear gradient with a fixed background attachment */
+.linear {
+    background-image: linear-gradient(
+        to right,
+        #2563eb,
+        #7c3aed,
+        #db2777
+    );
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Radial gradient spreading outward from the center */
+.radial {
+    background-image: radial-gradient(
+        circle,
+        #facc15,
+        #f97316,
+        #9a3412
+    );
+    color: #1f2937;
+}
+
+.content {
+    max-width: 650px;
+    padding: 35px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.code-example {
+    font-size: 14px !important;
+    overflow-wrap: anywhere;
+    font-family: monospace;
+}
+
+/* Fixed footer stays at the bottom of the viewport */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: #172554;
+    z-index: 10;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .header {
+        padding: 15px 10px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .content {
+        padding: 25px 18px;
+    }
+
+    .content h2 {
+        font-size: 26px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .gradient-section {
+        min-height: 70vh;
+    }
+
+    .footer {
+        font-size: 13px;
+    }
+}

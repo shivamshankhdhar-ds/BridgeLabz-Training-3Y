@@ -1,0 +1,145 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+header {
+    padding: 30px 15px;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.selector-section {
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.selector-section h2 {
+    margin-bottom: 18px;
+    color: #2563eb;
+}
+
+/* Attribute selector: targets text inputs */
+input[type="text"] {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0 20px;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+/* Attribute selector: links beginning with https */
+a[href^="https"] {
+    color: #087f5b;
+    font-weight: bold;
+}
+
+/* Pseudo-class: changes link appearance on hover */
+a:hover {
+    color: #dc2626;
+}
+
+/* Pseudo-class: styles the focused input */
+input:focus {
+    outline: 3px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+/* Pseudo-class: styles the third list item */
+.item-list li:nth-child(3) {
+    background-color: #dbeafe;
+    font-weight: bold;
+}
+
+/* Descendant combinator: targets all li elements inside item-list */
+.item-list li {
+    margin: 8px 0;
+    padding: 10px;
+    background-color: #f8fafc;
+    border-radius: 5px;
+}
+
+/* Pseudo-element: adds content before the paragraph */
+.decorated-text::before {
+    content: "Note: ";
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* Pseudo-element: adds a symbol after the paragraph */
+.decorated-text::after {
+    content: " ★";
+    color: #f59e0b;
+}
+
+/* Child combinator (>): only direct child paragraphs */
+.parent > p {
+    padding: 10px;
+    background-color: #dcfce7;
+    margin: 10px 0;
+}
+
+/* Descendant combinator (space): nested paragraph */
+.parent div p {
+    padding: 10px;
+    background-color: #fef3c7;
+    margin: 10px 0;
+}
+
+/* Adjacent sibling combinator (+): first paragraph after h3 */
+.combinator-section h3 + p {
+    padding: 10px;
+    background-color: #ede9fe;
+}
+
+/* General sibling combinator (~): all following paragraphs after h3 */
+.combinator-section h3 ~ p {
+    border-left: 4px solid #9333ea;
+    padding-left: 12px;
+    margin-top: 10px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Responsive spacing */
+@media (max-width: 600px) {
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .selector-section {
+        padding: 18px;
+    }
+}

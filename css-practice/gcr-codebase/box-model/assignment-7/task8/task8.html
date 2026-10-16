@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Exploration</title>
+    <link rel="stylesheet" href="task8.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Box Model Exploration</h1>
+        <p>Understand how content, padding, border and margin work.</p>
+    </header>
+
+    <main>
+        <section class="introduction">
+            <h2>What is the CSS Box Model?</h2>
+            <p>
+                Every HTML element is represented as a rectangular box.
+                The CSS Box Model consists of content, padding, border and margin.
+            </p>
+        </section>
+
+        <section class="box-model-section">
+            <h2>Box Model Layers</h2>
+
+            <div class="margin-layer">
+                <span class="layer-label">MARGIN</span>
+
+                <div class="border-layer">
+                    <span class="layer-label">BORDER</span>
+
+                    <div class="padding-layer">
+                        <span class="layer-label">PADDING</span>
+
+                        <div class="content-layer">
+                            <h3>CONTENT</h3>
+                            <p>This is the actual content area.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="description-section">
+            <h2>Four Parts of the Box Model</h2>
+
+            <div class="description-container">
+                <article class="description-card">
+                    <h3>1. Content</h3>
+                    <p>The area where text, images or other content appears.</p>
+                </article>
+
+                <article class="description-card">
+                    <h3>2. Padding</h3>
+                    <p>The space between the content and the border.</p>
+                </article>
+
+                <article class="description-card">
+                    <h3>3. Border</h3>
+                    <p>The line that surrounds the content and padding.</p>
+                </article>
+
+                <article class="description-card">
+                    <h3>4. Margin</h3>
+                    <p>The space outside the border that separates elements.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <h2>Box Sizing Comparison</h2>
+            <p>
+                Both boxes have a declared width of 250px.
+                Notice how their total widths differ.
+            </p>
+
+            <div class="comparison-container">
+                <div class="default-box">
+                    <h3>Default Box</h3>
+                    <p>box-sizing: content-box</p>
+                    <p>Width + padding + border</p>
+                </div>
+
+                <div class="border-box">
+                    <h3>Border Box</h3>
+                    <p>box-sizing: border-box</p>
+                    <p>Width includes padding and border</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Practice — Assignment 7, Task 8</p>
+    </footer>
+
+</body>
+</html>

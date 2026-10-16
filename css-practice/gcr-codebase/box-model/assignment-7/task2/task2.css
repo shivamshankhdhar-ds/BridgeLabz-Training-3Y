@@ -1,0 +1,61 @@
+/* Basic page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Center boxes horizontally and vertically */
+.box-container {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Common box styling */
+.box {
+    padding: 15px;
+    text-align: center;
+    overflow: auto;
+    color: white;
+}
+
+/* Different sizes and background colors */
+.box1 {
+    width: 200px;
+    height: 150px;
+    background-color: #3498db;
+}
+
+.box2 {
+    width: 30%;
+    height: 20vh;
+    min-height: 120px;
+    background-color: #27ae60;
+}
+
+.box3 {
+    width: 15em;
+    height: 12em;
+    max-width: 250px;
+    background-color: #e67e22;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}

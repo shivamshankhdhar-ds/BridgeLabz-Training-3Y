@@ -1,0 +1,171 @@
+
+/* Basic page styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header and footer */
+header,
+footer {
+    background-color: #243b55;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+footer {
+    margin-top: 35px;
+}
+
+/* Main content */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+section {
+    background-color: white;
+    padding: 22px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #243b55;
+    margin-bottom: 15px;
+}
+
+/* Box Model layers */
+.box-model-section {
+    text-align: center;
+}
+
+.margin-layer {
+    background-color: #ffd6a5;
+    outline: 2px dashed #d97706;
+    padding: 35px;
+    margin: 25px auto;
+    max-width: 650px;
+}
+
+.border-layer {
+    background-color: #a7c7e7;
+    border: 8px solid #2563a6;
+    padding: 28px;
+}
+
+.padding-layer {
+    background-color: #c7f0d8;
+    padding: 28px;
+}
+
+.content-layer {
+    background-color: #fff3a3;
+    padding: 25px 12px;
+    color: #222;
+}
+
+.layer-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.content-layer .layer-label {
+    margin-bottom: 5px;
+}
+
+/* Descriptions arranged with Flexbox */
+.description-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.description-card {
+    flex: 1 1 200px;
+    padding: 18px;
+    border: 2px solid #d5dce5;
+    background-color: #f8fafc;
+    border-radius: 6px;
+}
+
+.description-card h3 {
+    color: #2563a6;
+    margin-bottom: 8px;
+}
+
+/* Box sizing comparison */
+.comparison-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.default-box,
+.border-box {
+    width: 250px;
+    padding: 20px;
+    border: 5px solid #2563a6;
+    background-color: #dbeafe;
+    overflow-wrap: anywhere;
+}
+
+.default-box {
+    box-sizing: content-box;
+}
+
+.border-box {
+    box-sizing: border-box;
+    background-color: #dcfce7;
+    border-color: #16803c;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .margin-layer {
+        padding: 15px;
+    }
+
+    .border-layer {
+        padding: 15px;
+        border-width: 5px;
+    }
+
+    .padding-layer {
+        padding: 15px;
+    }
+
+    .comparison-container {
+        justify-content: center;
+    }
+
+    .default-box,
+    .border-box {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,256 @@
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Navigation header */
+.header {
+    background-color: #0f172a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Flexbox navigation layout */
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 75px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Website logo */
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #38bdf8;
+}
+
+/* Keyboard accessibility */
+.nav-links a:focus-visible,
+.logo:focus-visible,
+.nav-button:focus-visible,
+.hero-button:focus-visible {
+    outline: 2px solid #facc15;
+    outline-offset: 5px;
+}
+
+/* Navigation call-to-action */
+.nav-button {
+    background-color: #0284c7;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #0369a1;
+}
+
+/* Hero section */
+.hero {
+    min-height: 430px;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.tagline {
+    color: #0369a1;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    color: #0f172a;
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero-content > p:not(.tagline) {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #0284c7;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #0369a1;
+}
+
+/* General content sections */
+.content-section {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.content-section h2 {
+    color: #0f172a;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.content-section > p {
+    max-width: 700px;
+    margin: 0 auto 10px;
+}
+
+.alternate {
+    background-color: #f1f5f9;
+}
+
+/* Service cards using Flexbox */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.service-card {
+    flex: 1 1 220px;
+    max-width: 340px;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
+}
+
+.service-card h3 {
+    color: #0369a1;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Responsive navigation for smaller screens */
+@media (max-width: 850px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 0;
+        gap: 15px 25px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .nav-button {
+        padding: 8px 13px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 12px 16px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 45px 18px;
+    }
+
+    .hero-content > p:not(.tagline) {
+        font-size: 15px;
+    }
+
+    .content-section {
+        padding: 40px 6%;
+    }
+
+    .content-section h2 {
+        font-size: 25px;
+    }
+}

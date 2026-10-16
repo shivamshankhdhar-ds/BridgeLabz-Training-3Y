@@ -1,0 +1,70 @@
+/* Basic page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
+
+/* Arrange boxes horizontally using Flexbox */
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* Common box properties */
+.box {
+    width: 180px;
+    min-height: 130px;
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+    transition: border-color 0.4s ease;
+}
+
+/* Different border styles and padding */
+.solid {
+    border: 5px solid black;
+    padding: 15px;
+}
+
+.dashed {
+    border: 5px dashed black;
+    padding: 25px;
+}
+
+.double {
+    border: 7px double black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.groove {
+    border: 7px groove black;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Change border color smoothly on hover */
+.box:hover {
+    border-color: red;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
