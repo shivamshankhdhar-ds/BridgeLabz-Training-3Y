@@ -1,0 +1,164 @@
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header and footer */
+header,
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 24px 16px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+/* Main page layout */
+main {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 24px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 12px;
+}
+
+/* Arrange example cards using Flexbox */
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
+}
+
+/* Individual pseudo-class demonstration cards */
+.example-card {
+    flex: 1 1 220px;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+}
+
+.example-card h2 {
+    font-size: 22px;
+}
+
+.example-card p {
+    margin-bottom: 18px;
+}
+
+/* :hover changes the link appearance */
+.demo-link {
+    display: inline-block;
+    color: #1d4ed8;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.demo-link:hover {
+    color: white;
+    background-color: #1d4ed8;
+}
+
+/* Shared button styling */
+button {
+    padding: 11px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    background-color: #2563eb;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* :focus highlights a focused button */
+.focus-button:focus {
+    outline: 3px solid #93c5fd;
+    outline-offset: 4px;
+    background-color: #1e40af;
+}
+
+/* :active changes the button while it is pressed */
+.active-button:active {
+    background-color: #15803d;
+    transform: scale(0.94);
+}
+
+/* Remove default list markers and style list items */
+.demo-list {
+    list-style: none;
+}
+
+.demo-list li {
+    padding: 9px 12px;
+    margin-bottom: 6px;
+    background-color: #e2e8f0;
+    border-radius: 5px;
+}
+
+/* :nth-child(3) selects the third list item */
+.demo-list li:nth-child(3) {
+    background-color: #bfdbfe;
+    color: #1e40af;
+    font-weight: bold;
+    border-left: 4px solid #2563eb;
+}
+
+/* Summary section */
+.explanation ul {
+    padding-left: 22px;
+}
+
+.explanation li {
+    margin-bottom: 8px;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 17px;
+    }
+
+    .examples {
+        flex-direction: column;
+    }
+
+    .example-card {
+        width: 100%;
+    }
+}

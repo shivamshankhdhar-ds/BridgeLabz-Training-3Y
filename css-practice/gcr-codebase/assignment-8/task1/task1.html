@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Classes Demonstration</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Pseudo-Classes</h1>
+        <p>Explore how elements change their appearance during interaction.</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>What Are Pseudo-Classes?</h2>
+            <p>
+                Pseudo-classes style elements when they are in a particular
+                state, such as being hovered over, focused or clicked.
+            </p>
+        </section>
+
+        <!-- Flexbox aligns all examples in a row -->
+        <section class="examples">
+            <article class="example-card">
+                <h2>:hover</h2>
+                <p>Changes an element's style when the pointer moves over it.</p>
+                <a href="#hover-example" class="demo-link">
+                    Hover over this link
+                </a>
+            </article>
+
+            <article class="example-card">
+                <h2>:focus</h2>
+                <p>Highlights an element when it receives keyboard or mouse focus.</p>
+                <button type="button" class="focus-button">
+                    Focus on this button
+                </button>
+            </article>
+
+            <article class="example-card">
+                <h2>:active</h2>
+                <p>Applies a style while an element is being pressed.</p>
+                <button type="button" class="active-button">
+                    Press and hold
+                </button>
+            </article>
+
+            <article class="example-card">
+                <h2>:nth-child()</h2>
+                <p>Selects an element based on its position among siblings.</p>
+                <ul class="demo-list">
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    <li>Fourth item</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="explanation" id="hover-example">
+            <h2>Quick Summary</h2>
+            <ul>
+                <li><strong>:hover</strong> — pointer is over the element.</li>
+                <li><strong>:focus</strong> — element has keyboard or input focus.</li>
+                <li><strong>:active</strong> — element is being activated or pressed.</li>
+                <li><strong>:nth-child(3)</strong> — selects the third sibling element.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Practice — Assignment 8, Task 1</p>
+    </footer>
+
+</body>
+</html>

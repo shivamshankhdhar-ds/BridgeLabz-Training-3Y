@@ -1,0 +1,170 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header and footer */
+header,
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 24px 16px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+/* Main content */
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 12px;
+}
+
+/* Center tooltip examples using Flexbox */
+.tooltip-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 55px 45px;
+    padding: 45px 10px;
+}
+
+/* Parent element provides the positioning reference */
+.tooltip-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    cursor: pointer;
+}
+
+/* Tooltip icons */
+.tooltip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    background-color: #dbeafe;
+    border-radius: 50%;
+    font-size: 34px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tooltip-item > p {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Tooltip is positioned above its parent */
+.tooltip-text {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 190px;
+    padding: 10px 12px;
+    border-radius: 6px;
+
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.4;
+
+    /* Hidden until hover or keyboard focus */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    /* Smooth tooltip fade-in and fade-out */
+    transition: opacity 0.3s ease-in-out,
+                visibility 0.3s ease-in-out;
+}
+
+/* Small arrow below the tooltip */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-width: 7px;
+    border-style: solid;
+    border-color: #0f172a transparent transparent transparent;
+}
+
+/* Reveal tooltip on hover */
+.tooltip-item:hover .tooltip-text,
+.tooltip-item:focus-within .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Slightly enlarge icon on hover */
+.tooltip-item:hover .tooltip-icon {
+    transform: scale(1.08);
+}
+
+/* Explanation section */
+.instructions ul {
+    padding-left: 22px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .tooltip-container {
+        gap: 55px 25px;
+    }
+
+    .tooltip-text {
+        width: 160px;
+        font-size: 12px;
+    }
+}

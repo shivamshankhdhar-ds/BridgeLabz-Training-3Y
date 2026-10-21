@@ -1,0 +1,154 @@
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply consistent page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header and footer */
+header,
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+footer {
+    margin-top: 35px;
+}
+
+/* Center the main content */
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Common section styling */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+/* Comparison cards use Flexbox */
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Individual comparison card */
+.comparison-card {
+    flex: 1 1 320px;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background-color: #f8fafc;
+}
+
+.comparison-card h3 {
+    color: #334155;
+    margin-bottom: 5px;
+}
+
+.code-label {
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+/* Box display area */
+.box-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 190px;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+}
+
+/* Both boxes use the same declared width, padding and border */
+.default-box,
+.border-box {
+    width: 250px;
+    padding: 20px;
+    border: 5px solid #1d4ed8;
+    text-align: center;
+    background-color: #bfdbfe;
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+/* Default sizing: padding and border are added to width */
+.default-box {
+    box-sizing: content-box;
+}
+
+/* Border-box sizing: padding and border are included in width */
+.border-box {
+    box-sizing: border-box;
+    background-color: #bbf7d0;
+    border-color: #15803d;
+    color: #14532d;
+}
+
+/* Explanation lists */
+.comparison-card ul {
+    padding-left: 22px;
+    margin-top: 15px;
+}
+
+.comparison-card li {
+    margin-bottom: 7px;
+}
+
+/* Summary section */
+.summary {
+    border-left: 5px solid #2563eb;
+}
+
+.summary p {
+    margin-bottom: 12px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .comparison-card {
+        flex-basis: 100%;
+    }
+}

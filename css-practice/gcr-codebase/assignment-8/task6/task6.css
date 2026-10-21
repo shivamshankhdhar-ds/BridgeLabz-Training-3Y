@@ -1,0 +1,244 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header and footer */
+header,
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+/* Center the main content */
+main {
+    width: 92%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+.animation-section > p {
+    margin-bottom: 20px;
+}
+
+/* Animation 1: moving box track */
+.moving-track {
+    position: relative;
+    height: 90px;
+    padding: 10px;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Box moves across the track */
+.moving-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+
+    animation-name: move-box;
+    animation-duration: 3s;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/* Define the box movement */
+@keyframes move-box {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(92vw - 150px));
+    }
+}
+
+/* Animation 2: bouncing ball stage */
+.ball-stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 180px;
+    padding-top: 10px;
+    background-color: #eff6ff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Ball bounces vertically */
+.ball {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f97316, #dc2626);
+    box-shadow: 0 5px 10px rgba(220, 38, 38, 0.25);
+
+    animation: bounce-ball 1s ease-in-out 0s infinite alternate;
+}
+
+/* Define bouncing movement */
+@keyframes bounce-ball {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100px);
+    }
+}
+
+/* Ball shadow changes size during the bounce */
+.ball-shadow {
+    position: absolute;
+    bottom: 20px;
+    width: 40px;
+    height: 10px;
+    background-color: rgba(15, 23, 42, 0.2);
+    border-radius: 50%;
+
+    animation: shadow-size 1s ease-in-out infinite alternate;
+}
+
+@keyframes shadow-size {
+    from {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(0.6);
+        opacity: 0.15;
+    }
+}
+
+/* Animation 3: changing text colors */
+.text-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+}
+
+.color-text {
+    font-size: clamp(25px, 5vw, 40px);
+    font-weight: bold;
+
+    animation-name: change-color;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/* Change text color and scale */
+@keyframes change-color {
+    0% {
+        color: #2563eb;
+        transform: scale(1);
+    }
+
+    50% {
+        color: #9333ea;
+        transform: scale(1.08);
+    }
+
+    100% {
+        color: #e11d48;
+        transform: scale(1);
+    }
+}
+
+/* Animation properties explanation */
+.animation-info ul {
+    padding-left: 22px;
+    margin-top: 15px;
+}
+
+.animation-info li {
+    margin-bottom: 10px;
+}
+
+/* Respect reduced-motion accessibility preference */
+@media (prefers-reduced-motion: reduce) {
+    .moving-box,
+    .ball,
+    .ball-shadow,
+    .color-text {
+        animation: none;
+    }
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .moving-track {
+        height: 80px;
+    }
+
+    .moving-box {
+        width: 55px;
+        height: 55px;
+    }
+
+    @keyframes move-box {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc(95vw - 140px));
+        }
+    }
+}

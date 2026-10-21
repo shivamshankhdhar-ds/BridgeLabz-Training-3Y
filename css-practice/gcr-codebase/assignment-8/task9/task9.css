@@ -1,0 +1,240 @@
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header and footer */
+header,
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+footer {
+    margin-top: 35px;
+}
+
+/* Main page layout */
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+.intro {
+    text-align: center;
+}
+
+/* Buttons arranged using Flexbox */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    padding: 15px 0;
+}
+
+/* Common button styling */
+.effect-button {
+    padding: 13px 25px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(15, 23, 42, 0.12);
+
+    /* Smoothly animate color, scale and shadow changes */
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Primary button */
+.primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* Secondary button */
+.secondary {
+    background-color: #475569;
+    color: white;
+}
+
+.secondary:hover {
+    background-color: #334155;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.2);
+}
+
+/* Outline button */
+.outline {
+    background-color: white;
+    color: #2563eb;
+    border-color: #2563eb;
+    box-shadow: none;
+}
+
+.outline:hover {
+    background-color: #dbeafe;
+    transform: scale(1.05);
+}
+
+/* Press effect */
+.effect-button:active {
+    transform: scale(0.95);
+}
+
+/* Keyboard focus effect */
+.effect-button:focus-visible,
+.effect-card a:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 4px;
+}
+
+/* Cards arranged using Flexbox */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 22px;
+    padding: 10px 0;
+}
+
+/* Card base styling */
+.effect-card {
+    flex: 1 1 240px;
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #f8fafc;
+    border: 1px solid #dbe3ee;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
+}
+
+/* Card hover combines transform and shadow */
+.effect-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background-color: #eff6ff;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
+}
+
+.card-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.effect-card h3 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+.effect-card p {
+    margin-bottom: 18px;
+    color: #475569;
+}
+
+/* Links inside cards */
+.effect-card a {
+    display: inline-block;
+    color: #1d4ed8;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.effect-card a:hover {
+    color: #7c3aed;
+    text-decoration: underline;
+}
+
+/* Explanation section */
+.explanation ul {
+    padding-left: 22px;
+}
+
+.explanation li {
+    margin-bottom: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .effect-button {
+        width: 100%;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .effect-card {
+        width: 100%;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .effect-button,
+    .effect-card,
+    .effect-card a {
+        transition: none;
+    }
+
+    .effect-button:hover,
+    .effect-card:hover {
+        transform: none;
+    }
+}

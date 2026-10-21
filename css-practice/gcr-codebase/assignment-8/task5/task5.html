@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Button Collection</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+
+    <header>
+        <h1>Styled Button Collection</h1>
+        <p>Explore different button styles and CSS pseudo-classes.</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Button Styles</h2>
+            <p>
+                Buttons can have different colors, borders and interactive
+                effects to improve the user experience.
+            </p>
+        </section>
+
+        <section class="button-section">
+            <h2>Explore the Buttons</h2>
+
+            <div class="button-container">
+                <article class="button-card">
+                    <h3>Primary Button</h3>
+                    <p>Used for the main action on a page.</p>
+                    <button type="button" class="btn primary">
+                        Primary
+                    </button>
+                </article>
+
+                <article class="button-card">
+                    <h3>Secondary Button</h3>
+                    <p>Used for a supporting action.</p>
+                    <button type="button" class="btn secondary">
+                        Secondary
+                    </button>
+                </article>
+
+                <article class="button-card">
+                    <h3>Outline Button</h3>
+                    <p>Uses a transparent background and visible border.</p>
+                    <button type="button" class="btn outline">
+                        Outline
+                    </button>
+                </article>
+
+                <article class="button-card">
+                    <h3>Disabled Button</h3>
+                    <p>This button cannot be clicked.</p>
+                    <button type="button" class="btn disabled" disabled>
+                        Disabled
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>CSS Pseudo-Classes Used</h2>
+
+            <ul>
+                <li><strong>:hover</strong> — changes appearance when the pointer is over a button.</li>
+                <li><strong>:active</strong> — applies an effect while the button is pressed.</li>
+                <li><strong>:focus-visible</strong> — highlights a button during keyboard navigation.</li>
+                <li><strong>:disabled</strong> — styles a button that is disabled.</li>
+            </ul>
+
+            <p class="tip">
+                Tip: Use the Tab key to navigate between enabled buttons
+                and see the keyboard focus outline.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Practice — Assignment 8, Task 5</p>
+    </footer>
+
+</body>
+</html>

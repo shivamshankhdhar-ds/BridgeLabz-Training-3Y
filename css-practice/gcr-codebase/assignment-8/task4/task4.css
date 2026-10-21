@@ -1,0 +1,155 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Style the semantic header and footer */
+header,
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 24px 16px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+/* Keep the main content centered */
+main {
+    width: 92%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Element selector: styles all section elements */
+section {
+    background-color: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 8px;
+    border: 1px solid #dbe3ee;
+}
+
+/* Element selector: common heading style */
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 14px;
+}
+
+/* Class selector: highlights selected paragraphs */
+.highlight {
+    background-color: #dbeafe;
+    border-left: 4px solid #2563eb;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* ID selector: styles one unique section */
+#unique-section {
+    border-top: 4px solid #7c3aed;
+}
+
+/* ID selector: styles the paragraph with this ID */
+#special-text {
+    color: #7c3aed;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* Attribute selector: targets text input fields */
+input[type="text"] {
+    border: 2px solid #0284c7;
+    background-color: #f0f9ff;
+}
+
+/* Attribute selector: targets email input fields */
+input[type="email"] {
+    border: 2px solid #16a34a;
+    background-color: #f0fdf4;
+}
+
+/* Common input styling */
+input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font: inherit;
+}
+
+/* Attribute selector: targets links opening a new tab */
+a[target="_blank"] {
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+/* Descendant combinator: all paragraphs inside parent-box */
+.parent-box p {
+    background-color: #fef3c7;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+/* Child combinator: only direct child paragraphs */
+.parent-box > p {
+    border-left: 4px solid #d97706;
+    font-weight: bold;
+}
+
+/* Class selector for nested content */
+.nested-box {
+    padding: 10px;
+    background-color: #fff7ed;
+}
+
+/* Adjacent sibling combinator: first paragraph after h3 */
+.sibling-demo h3 + p {
+    background-color: #dcfce7;
+    border-left: 4px solid #16a34a;
+    padding: 10px;
+}
+
+/* General sibling combinator: all later paragraphs after h3 */
+.sibling-demo h3 ~ p {
+    margin-top: 8px;
+}
+
+/* Style the topic list */
+.topic-list {
+    padding-left: 25px;
+}
+
+/* Element selector for list items */
+.topic-list li {
+    padding: 7px;
+    margin-bottom: 5px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 16px;
+    }
+}

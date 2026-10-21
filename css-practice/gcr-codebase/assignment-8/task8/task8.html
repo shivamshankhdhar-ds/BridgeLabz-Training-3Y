@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box-Sizing Comparison</title>
+    <link rel="stylesheet" href="task8.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Box-Sizing Comparison</h1>
+        <p>Understand how CSS calculates the total width of an element.</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>What Is Box-Sizing?</h2>
+            <p>
+                The CSS box-sizing property determines how the declared
+                width and height of an element are calculated.
+            </p>
+        </section>
+
+        <section class="comparison-section">
+            <h2>Compare the Two Boxes</h2>
+
+            <div class="box-container">
+
+                <article class="comparison-card">
+                    <h3>Default Box</h3>
+                    <p class="code-label">box-sizing: content-box;</p>
+
+                    <div class="box-area">
+                        <div class="default-box">
+                            Content Area
+                        </div>
+                    </div>
+
+                    <p>
+                        With content-box, the declared width applies only
+                        to the content. Padding and borders are added outside.
+                    </p>
+
+                    <ul>
+                        <li>Declared width: 250px</li>
+                        <li>Left and right padding: 40px total</li>
+                        <li>Left and right border: 10px total</li>
+                        <li><strong>Total width: 300px</strong></li>
+                    </ul>
+                </article>
+
+                <article class="comparison-card">
+                    <h3>Border Box</h3>
+                    <p class="code-label">box-sizing: border-box;</p>
+
+                    <div class="box-area">
+                        <div class="border-box">
+                            Content Area
+                        </div>
+                    </div>
+
+                    <p>
+                        With border-box, the declared width includes
+                        the content, padding and borders.
+                    </p>
+
+                    <ul>
+                        <li>Declared width: 250px</li>
+                        <li>Left and right padding: 40px total</li>
+                        <li>Left and right border: 10px total</li>
+                        <li><strong>Total width: 250px</strong></li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="summary">
+            <h2>Key Difference</h2>
+            <p>
+                <strong>content-box:</strong> Total width = content width
+                + horizontal padding + horizontal borders.
+            </p>
+            <p>
+                <strong>border-box:</strong> Declared width already includes
+                horizontal padding and borders.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Practice — Assignment 8, Task 8</p>
+    </footer>
+
+</body>
+</html>

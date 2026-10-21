@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Practice</title>
+    <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Selectors Practice Page</h1>
+        <p>Explore different CSS selectors and combinators.</p>
+    </header>
+
+    <main>
+        <!-- Element and class selector examples -->
+        <section class="selector-section">
+            <h2>1. Element and Class Selectors</h2>
+
+            <p>Element selector: all paragraphs receive common styling.</p>
+            <p class="highlight">
+                Class selector: this paragraph uses the highlight class.
+            </p>
+            <p class="highlight">
+                The same class can style multiple elements.
+            </p>
+        </section>
+
+        <!-- ID and attribute selector examples -->
+        <section id="unique-section" class="selector-section">
+            <h2>2. ID and Attribute Selectors</h2>
+
+            <p id="special-text">
+                ID selector: this paragraph has a unique ID.
+            </p>
+
+            <input type="text" placeholder="Text input selector">
+            <input type="email" placeholder="Email input selector">
+
+            <p>
+                <a href="https://example.com" target="_blank">
+                    External example link
+                </a>
+            </p>
+        </section>
+
+        <!-- Descendant and child combinator examples -->
+        <section class="selector-section">
+            <h2>3. Descendant and Child Combinators</h2>
+
+            <div class="parent-box">
+                <p>This is a direct child paragraph.</p>
+
+                <div class="nested-box">
+                    <p>This paragraph is nested inside another div.</p>
+                </div>
+            </div>
+
+            <p>
+                The descendant selector styles paragraphs at any depth
+                inside the parent box.
+            </p>
+        </section>
+
+        <!-- Adjacent and general sibling combinators -->
+        <section class="selector-section">
+            <h2>4. Sibling Combinators</h2>
+
+            <div class="sibling-demo">
+                <h3>Heading for sibling selectors</h3>
+                <p>This is the adjacent sibling paragraph.</p>
+                <p>This is another paragraph.</p>
+                <p>This is a later sibling paragraph.</p>
+            </div>
+        </section>
+
+        <!-- List selector example -->
+        <section class="selector-section">
+            <h2>5. List Selector Example</h2>
+
+            <ul class="topic-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Practice — Assignment 8, Task 4</p>
+    </footer>
+
+</body>
+</html>

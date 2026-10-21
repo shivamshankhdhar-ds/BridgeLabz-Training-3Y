@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Components Showcase</title>
+    <link rel="stylesheet" href="task7.css">
+</head>
+<body>
+
+    <header>
+        <h1>User Interface Components</h1>
+        <p>A collection of useful and modern UI elements.</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Interactive UI Playground</h2>
+            <p>
+                Explore a search bar, action buttons and a dropdown menu.
+                Hover over or focus on the controls to see their effects.
+            </p>
+        </section>
+
+        <section class="ui-card">
+            <div class="card-heading">
+                <h2>Explore Components</h2>
+                <p>Find information and choose an action.</p>
+            </div>
+
+            <!-- Search component -->
+            <div class="component-group">
+                <label for="search">Search</label>
+
+                <form class="search-form" action="#" method="get">
+                    <input
+                        type="search"
+                        id="search"
+                        name="search"
+                        placeholder="Search topics..."
+                        aria-label="Search topics"
+                    >
+                    <button type="submit" class="search-button">
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="component-group">
+                <h3>Action Buttons</h3>
+
+                <div class="button-container">
+                    <button type="button" class="btn primary">
+                        Get Started
+                    </button>
+
+                    <button type="button" class="btn secondary">
+                        Learn More
+                    </button>
+
+                    <button type="button" class="btn outline">
+                        Explore
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dropdown menu -->
+            <div class="component-group">
+                <label for="category">Choose a Category</label>
+
+                <select id="category" name="category">
+                    <option value="">Select a category</option>
+                    <option value="web">Web Development</option>
+                    <option value="design">UI/UX Design</option>
+                    <option value="data">Data Science</option>
+                    <option value="ai">Artificial Intelligence</option>
+                </select>
+            </div>
+
+            <div class="info-message">
+                <strong>Tip:</strong>
+                Use the Tab key to navigate through the components
+                and observe their focus effects.
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Component Features</h2>
+
+            <div class="feature-container">
+                <article class="feature-item">
+                    <h3>Search Bar</h3>
+                    <p>Accepts text input for searching topics.</p>
+                </article>
+
+                <article class="feature-item">
+                    <h3>Buttons</h3>
+                    <p>Show different styles for user actions.</p>
+                </article>
+
+                <article class="feature-item">
+                    <h3>Dropdown</h3>
+                    <p>Allows users to select an available category.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Practice — Assignment 8, Task 7</p>
+    </footer>
+
+</body>
+</html>
