@@ -1,0 +1,181 @@
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+/* Flexbox header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 6%;
+    background: #312e81;
+    color: white;
+}
+
+.header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header a:hover,
+.header a:focus-visible {
+    color: #a5f3fc;
+}
+
+/* Main grid containing three sections */
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* Shared section styling */
+.demo-section {
+    min-width: 0;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000010;
+
+    animation: fadeIn 0.8s ease both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.demo-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px #00000018;
+}
+
+.demo-section h2 {
+    margin-bottom: 18px;
+}
+
+/* Image gallery */
+.gallery-section {
+    grid-column: 1 / -1;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.image-grid img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.image-grid img:hover {
+    filter: brightness(75%);
+    transform: scale(1.02);
+}
+
+/* Text section */
+.design-section p {
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.code-example {
+    padding: 15px;
+    border-radius: 7px;
+    background: #ede9fe;
+    overflow-wrap: anywhere;
+    color: #5b21b6;
+}
+
+/* Cheat sheet */
+.cheat-section ul {
+    padding-left: 20px;
+}
+
+.cheat-section li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 22px;
+    background: #312e81;
+    color: white;
+    line-height: 1.8;
+}
+
+/* Stack all sections below 700px */
+@media (max-width: 699px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .demo-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .gallery-section {
+        grid-column: auto;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

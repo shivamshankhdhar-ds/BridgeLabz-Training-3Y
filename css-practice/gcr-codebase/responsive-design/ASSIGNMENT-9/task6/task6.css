@@ -1,0 +1,92 @@
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 35px 20px;
+    background: #134e4a;
+    color: white;
+}
+
+.header p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Grid layout with two or three columns */
+.cheat-sheet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    padding: 35px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.topic {
+    padding: 25px;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-left: 5px solid #0d9488;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #00000010;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #00000018;
+}
+
+.topic h2 {
+    margin-bottom: 12px;
+    color: #0f766e;
+}
+
+.topic p {
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: #475569;
+}
+
+.topic code {
+    display: block;
+    padding: 12px;
+    background: #ecfdf5;
+    border-radius: 6px;
+    color: #065f46;
+    overflow-wrap: anywhere;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #134e4a;
+    color: white;
+}
+
+/* Stack topics below 700px */
+@media (max-width: 699px) {
+    .cheat-sheet {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .topic {
+        padding: 20px;
+    }
+}

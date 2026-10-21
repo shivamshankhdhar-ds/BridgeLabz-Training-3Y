@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link rel="stylesheet" href="task10.css">
+</head>
+<body>
+
+    <!-- Dashboard header -->
+    <header class="dashboard-header">
+        <h1>CSS Dashboard</h1>
+        <p>Responsive Design Learning Center</p>
+    </header>
+
+    <!-- Main dashboard layout -->
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Navigation</h2>
+            <nav aria-label="Dashboard navigation">
+                <a href="#overview">Overview</a>
+                <a href="#filters">Filters</a>
+                <a href="#typography">Typography</a>
+                <a href="#media-queries">Media Queries</a>
+                <a href="#cheat-sheet">Cheat Sheet</a>
+            </nav>
+        </aside>
+
+        <!-- Dashboard main content -->
+        <main class="dashboard-main" id="overview">
+            <section class="welcome">
+                <h2>Welcome Back!</h2>
+                <p>Explore the essential techniques of responsive CSS.</p>
+            </section>
+
+            <section class="dashboard-cards">
+
+                <article class="dashboard-card" id="filters">
+                    <span class="card-icon">01</span>
+                    <h3>CSS Filters</h3>
+                    <p>Apply grayscale, blur, sepia and other visual effects.</p>
+                    <code>filter: grayscale(100%);</code>
+                </article>
+
+                <article class="dashboard-card" id="typography">
+                    <span class="card-icon">02</span>
+                    <h3>Typography</h3>
+                    <p>Scale text smoothly across different screen sizes.</p>
+                    <code>font-size: clamp(1rem, 3vw, 2rem);</code>
+                </article>
+
+                <article class="dashboard-card" id="media-queries">
+                    <span class="card-icon">03</span>
+                    <h3>Media Queries</h3>
+                    <p>Change styles based on the viewport width.</p>
+                    <code>@media (max-width: 750px)</code>
+                </article>
+
+                <article class="dashboard-card" id="cheat-sheet">
+                    <span class="card-icon">04</span>
+                    <h3>Cheat Sheet Links</h3>
+                    <p>Review common CSS properties and responsive techniques.</p>
+                    <a href="#overview" class="learn-link">Back to Overview</a>
+                </article>
+
+            </section>
+        </main>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 CSS Dashboard | Responsive Web Design</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Principles</title>
+    <link rel="stylesheet" href="task9.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Principles of Responsive Design</h1>
+        <p>Three important concepts for building flexible websites.</p>
+    </header>
+
+    <main>
+        <section class="principles">
+
+            <article class="principle-card">
+                <div class="icon">01</div>
+                <h2>Fluid Layouts</h2>
+                <p>
+                    Fluid layouts use flexible widths and relative units
+                    to adapt content to available screen space.
+                </p>
+                <pre><code>.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}</code></pre>
+            </article>
+
+            <article class="principle-card">
+                <div class="icon">02</div>
+                <h2>Flexible Media</h2>
+                <p>
+                    Images and other media should resize within
+                    their containers without overflowing.
+                </p>
+                <pre><code>img {
+    max-width: 100%;
+    height: auto;
+}</code></pre>
+            </article>
+
+            <article class="principle-card">
+                <div class="icon">03</div>
+                <h2>Breakpoints</h2>
+                <p>
+                    Breakpoints use media queries to change the layout
+                    when the viewport reaches a specified width.
+                </p>
+                <pre><code>@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}</code></pre>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Learn. Build. Adapt.</p>
+    </footer>
+
+</body>
+</html>

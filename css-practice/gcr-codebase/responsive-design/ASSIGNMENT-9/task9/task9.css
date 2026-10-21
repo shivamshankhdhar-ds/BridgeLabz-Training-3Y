@@ -1,0 +1,117 @@
+
+/* Global reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 35px 20px;
+    background: #172554;
+    color: white;
+}
+
+.header p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Three-column Grid */
+.principles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 35px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.principle-card {
+    min-width: 0;
+    padding: 25px;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000010;
+    transition: background 0.4s ease, color 0.4s ease,
+                transform 0.3s ease;
+}
+
+/* Gradient and text color change on hover */
+.principle-card:hover {
+    background: linear-gradient(135deg, #312e81, #0f766e);
+    color: white;
+    transform: translateY(-6px);
+}
+
+.icon {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4f46e5;
+    margin-bottom: 18px;
+    transition: color 0.4s ease;
+}
+
+.principle-card:hover .icon {
+    color: #a5f3fc;
+}
+
+.principle-card h2 {
+    margin-bottom: 15px;
+}
+
+.principle-card p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.principle-card pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    padding: 15px;
+    border-radius: 8px;
+    background: #e0e7ff;
+    color: #312e81;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+.principle-card:hover pre {
+    background: #ffffff20;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #172554;
+    color: white;
+}
+
+/* Single-column layout below 600px */
+@media (max-width: 599px) {
+    .principles {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 18px;
+    }
+
+    .principle-card {
+        padding: 22px;
+    }
+}
+
+/* Two columns on medium-sized screens */
+@media (min-width: 600px) and (max-width: 900px) {
+    .principles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
