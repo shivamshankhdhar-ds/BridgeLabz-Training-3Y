@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            min-height: 100vh;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        body.light-theme {
+            background-color: #f5f5f5;
+            color: #222;
+        }
+
+        body.light-theme .container {
+            background-color: white;
+        }
+
+        body.dark-theme {
+            background-color: #202124;
+            color: white;
+        }
+
+        body.dark-theme .container {
+            background-color: #303134;
+        }
+
+        body.blue-theme {
+            background-color: #dceeff;
+            color: #123b65;
+        }
+
+        body.blue-theme .container {
+            background-color: #ffffff;
+        }
+
+        button {
+            padding: 12px 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        #lightButton {
+            background-color: #eeeeee;
+            color: #222;
+        }
+
+        #darkButton {
+            background-color: #303134;
+            color: white;
+        }
+
+        #blueButton {
+            background-color: #1769aa;
+            color: white;
+        }
+
+        #themeStatus {
+            font-weight: bold;
+            margin-top: 25px;
+        }
+    </style>
+
+    <script src="q4.js" defer></script>
+</head>
+<body class="light-theme" data-theme="light">
+    <div class="container">
+        <h1>Theme Switcher</h1>
+
+        <p>Select your preferred theme:</p>
+
+        <button id="lightButton" data-theme="light">
+            Light Theme
+        </button>
+
+        <button id="darkButton" data-theme="dark">
+            Dark Theme
+        </button>
+
+        <button id="blueButton" data-theme="blue">
+            Blue Theme
+        </button>
+
+        <p id="themeStatus">Current Theme: Light</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table Filter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 40px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1769aa;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f7fc;
+        }
+
+        #noResults {
+            color: red;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+
+    <script src="q6.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Table Filter</h1>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name, branch, or CGPA..."
+        >
+
+        <p id="noResults" hidden>No results found</p>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Aarav Sharma</td>
+                    <td>CSE</td>
+                    <td>8.7</td>
+                </tr>
+
+                <tr>
+                    <td>Priya Singh</td>
+                    <td>DSAI</td>
+                    <td>9.1</td>
+                </tr>
+
+                <tr>
+                    <td>Rohan Verma</td>
+                    <td>ECE</td>
+                    <td>7.8</td>
+                </tr>
+
+                <tr>
+                    <td>Ananya Gupta</td>
+                    <td>CSE</td>
+                    <td>8.9</td>
+                </tr>
+
+                <tr>
+                    <td>Kabir Yadav</td>
+                    <td>DSAI</td>
+                    <td>8.2</td>
+                </tr>
+
+                <tr>
+                    <td>Neha Sharma</td>
+                    <td>IT</td>
+                    <td>8.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+            margin: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px #00000015;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+            box-sizing: border-box;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid #1769aa;
+            border-color: #1769aa;
+        }
+
+        input[aria-invalid="true"] {
+            border: 1px solid red;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #1769aa;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0f4f85;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+            margin-top: 18px;
+        }
+    </style>
+
+    <script src="q9.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    aria-describedby="nameError"
+                >
+                <p id="nameError" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    aria-describedby="emailError"
+                >
+                <p id="emailError" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Minimum 6 characters"
+                    aria-describedby="passwordError"
+                >
+                <p id="passwordError" class="error"></p>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="successMessage" class="success" role="status"></p>
+    </div>
+</body>
+</html>

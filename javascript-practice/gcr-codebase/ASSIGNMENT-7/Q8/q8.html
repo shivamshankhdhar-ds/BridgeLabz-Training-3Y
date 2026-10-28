@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dropdown</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+            margin: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px #00000015;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        #dropdownButton {
+            min-width: 220px;
+            padding: 12px 16px;
+            border: 1px solid #1769aa;
+            border-radius: 6px;
+            background-color: #1769aa;
+            color: white;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        #dropdownButton:hover {
+            background-color: #0f4f85;
+        }
+
+        .dropdown-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            margin-top: 4px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px #00000020;
+            z-index: 10;
+        }
+
+        .dropdown-options.open {
+            display: block;
+        }
+
+        .option {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: white;
+            text-align: left;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .option:hover {
+            background-color: #e6f2ff;
+        }
+
+        #selectedValue {
+            margin-top: 25px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script src="q8.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Custom Dropdown</h1>
+
+        <p>Select your preferred course:</p>
+
+        <div class="dropdown" id="customDropdown">
+            <button
+                type="button"
+                id="dropdownButton"
+                aria-expanded="false"
+                aria-controls="dropdownOptions"
+            >
+                Choose a course &#9662;
+            </button>
+
+            <div
+                class="dropdown-options"
+                id="dropdownOptions"
+            >
+                <button class="option" type="button" data-value="JavaScript">
+                    JavaScript
+                </button>
+
+                <button class="option" type="button" data-value="Python">
+                    Python
+                </button>
+
+                <button class="option" type="button" data-value="Java">
+                    Java
+                </button>
+
+                <button class="option" type="button" data-value="Data Science">
+                    Data Science
+                </button>
+            </div>
+        </div>
+
+        <p id="selectedValue">Selected course: None</p>
+    </div>
+</body>
+</html>
