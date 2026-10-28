@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form Validator</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 450px; margin: 30px auto; }
+        input { display: block; width: 100%; box-sizing: border-box; padding: 10px; margin: 6px 0; border: 2px solid #ccc; }
+        .valid { border-color: green; }
+        .invalid { border-color: red; }
+        .error { color: red; font-size: 13px; }
+        button { padding: 10px 18px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Student Registration</h2>
+    <form id="studentForm" novalidate>
+        <label>Name</label>
+        <input id="name" type="text">
+        <div id="nameError" class="error"></div>
+
+        <label>Email</label>
+        <input id="email" type="text">
+        <div id="emailError" class="error"></div>
+
+        <label>Phone</label>
+        <input id="phone" type="text">
+        <div id="phoneError" class="error"></div>
+
+        <label>Password</label>
+        <input id="password" type="password">
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Register</button>
+        <p id="result"></p>
+    </form>
+    <script src="q2.js"></script>
+</body>
+</html>

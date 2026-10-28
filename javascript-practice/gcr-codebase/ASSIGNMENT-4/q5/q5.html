@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 450px; margin: 30px auto; }
+        input { display: block; width: 100%; box-sizing: border-box; padding: 10px; margin: 8px 0 15px; }
+        button { padding: 10px 18px; }
+        #ticket { background: #f2f2f2; padding: 15px; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <h2>Movie Ticket Booking</h2>
+    <form id="bookingForm">
+        <label>Name</label>
+        <input id="name" required>
+
+        <label>Email</label>
+        <input id="email" required>
+
+        <label>Seats (1–10)</label>
+        <input id="seats" type="number" min="1" max="10" required>
+
+        <button type="submit">Book Ticket</button>
+    </form>
+    <p id="message"></p>
+    <div id="ticket"></div>
+    <script src="q5.js"></script>
+</body>
+</html>
