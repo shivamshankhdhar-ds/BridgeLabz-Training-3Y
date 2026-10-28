@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Note - Blog</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+
+    <header class="blog-header py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <a href="#" class="blog-logo">The Daily Note</a>
+
+            <nav>
+                <a href="#articles" class="me-3">Articles</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <section class="intro-section text-center mb-5">
+            <p class="text-uppercase small fw-bold">Ideas for everyday life</p>
+            <h1 class="fw-bold">Stories Worth Sharing</h1>
+            <p class="lead">A few thoughts on learning, creativity and living well.</p>
+        </section>
+
+        <section id="articles" class="row g-4">
+            <div class="col-md-6">
+                <article class="card blog-card h-100">
+                    <img
+                        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
+                        class="card-img-top"
+                        alt="Notebook and writing tools">
+
+                    <div class="card-body p-4">
+                        <span class="badge rounded-pill mb-3">Productivity</span>
+                        <h2 class="h4">Small Habits, Real Progress</h2>
+                        <p>
+                            Big changes do not always happen overnight.
+                            Sometimes, a small habit repeated every day
+                            makes the biggest difference.
+                        </p>
+                        <a href="#about" class="btn btn-primary">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6">
+                <article class="card blog-card h-100">
+                    <img
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                        class="card-img-top"
+                        alt="Laptop on a work desk">
+
+                    <div class="card-body p-4">
+                        <span class="badge rounded-pill mb-3">Technology</span>
+                        <h2 class="h4">Learning Something New</h2>
+                        <p>
+                            Learning becomes easier when we stay curious,
+                            practise regularly and give ourselves room
+                            to make mistakes.
+                        </p>
+                        <a href="#about" class="btn btn-primary">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="text-center py-5">
+            <h2 class="h3">About This Blog</h2>
+            <p class="mx-auto">
+                The Daily Note is a small space for sharing useful ideas,
+                personal lessons and things worth thinking about.
+            </p>
+        </section>
+    </main>
+
+    <footer class="text-center py-4">
+        <p class="mb-0">&copy; 2026 The Daily Note. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

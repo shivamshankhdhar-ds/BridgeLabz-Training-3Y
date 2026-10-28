@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+.product-card {
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.product-card img {
+    height: 190px;
+    object-fit: cover;
+}
+
+.product-card .card-body {
+    padding: 1.2rem;
+}

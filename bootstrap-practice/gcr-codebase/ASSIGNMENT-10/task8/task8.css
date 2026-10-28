@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+}
+
+.pricing-card {
+    border: 1px solid #e1e5eb;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-features li {
+    margin: 18px 0;
+}
+
+.pro-plan {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.18);
+}
+
+.pro-plan hr {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 767px) {
+    .pricing-card:hover {
+        transform: translateY(-3px);
+    }
+}

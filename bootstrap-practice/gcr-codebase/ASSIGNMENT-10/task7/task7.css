@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+}
+
+.tracker-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e5eb;
+}
+
+.list-group-item {
+    padding: 18px;
+}
+
+.task-completed {
+    background-color: #f0faf3;
+}
+
+.task-completed h2 {
+    color: #6c757d;
+    text-decoration: line-through;
+}
+
+.complete-btn {
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 576px) {
+    .list-group-item {
+        align-items: flex-start !important;
+    }
+}

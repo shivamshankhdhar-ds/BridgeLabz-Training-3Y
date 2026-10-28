@@ -1,0 +1,78 @@
+:root {
+    --bs-primary: #6c4ab6;
+    --bs-primary-rgb: 108, 74, 182;
+    --bs-font-sans-serif: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--bs-font-sans-serif);
+    color: #302b3a;
+    background-color: #fcfaff;
+}
+
+.blog-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee7f7;
+}
+
+.blog-logo {
+    color: #6c4ab6;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.blog-header nav a {
+    color: #302b3a;
+    text-decoration: none;
+}
+
+.blog-header nav a:hover {
+    color: #6c4ab6;
+}
+
+.intro-section {
+    padding: 30px 0;
+}
+
+.intro-section p:first-child {
+    color: #6c4ab6;
+    letter-spacing: 2px;
+}
+
+.blog-card {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(70, 45, 110, 0.08);
+}
+
+.blog-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.blog-card .badge {
+    background-color: #eee6ff;
+    color: #6c4ab6;
+}
+
+.btn-primary {
+    background-color: #6c4ab6;
+    border-color: #6c4ab6;
+}
+
+.btn-primary:hover {
+    background-color: #553796;
+    border-color: #553796;
+}
+
+#about p {
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #302b3a;
+    color: white;
+}

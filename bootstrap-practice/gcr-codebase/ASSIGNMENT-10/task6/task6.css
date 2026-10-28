@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.summary-box {
+    border-color: #dfe3e8 !important;
+}
+
+.card {
+    border-color: #e5e7eb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.alert {
+    border-radius: 8px;
+}
+
+footer {
+    color: #555;
+}

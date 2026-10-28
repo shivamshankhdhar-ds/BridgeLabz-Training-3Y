@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #30343b;
+    background-color: #ffffff;
+}
+
+.blog-header {
+    background-color: #f4f7fb;
+    border-bottom: 1px solid #e3e8ef;
+}
+
+.post-card {
+    border: 1px solid #e4e8ed;
+    border-radius: 10px;
+}
+
+.post-card .card-body {
+    line-height: 1.7;
+}
+
+.pagination .page-link {
+    color: #0d6efd;
+}
+
+.pagination .active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+}
+
+.pagination .page-link:hover {
+    background-color: #eaf2ff;
+}
+
+@media (max-width: 576px) {
+    .pagination .page-link {
+        padding: 0.4rem 0.65rem;
+    }
+}
